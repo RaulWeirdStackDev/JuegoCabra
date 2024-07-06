@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Granjero y el río</title>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="left-shore" class="shore">
+            <div id="farmer" class="character">👨‍🌾</div>
+            <div id="wolf" class="character">🐺</div>
+            <div id="goat" class="character">🐐</div>
+            <div id="cabbage" class="character">🥬</div>
+        </div>
+        <div id="river">
+            <div id="boat">🚤</div>
+        </div>
+        <div id="right-shore" class="shore"></div>
+    </div>
+    <div id="controls">
+        <button onclick="moveCharacter('farmer')">Mover Granjero</button>
+        <button onclick="moveCharacter('wolf')">Mover Lobo</button>
+        <button onclick="moveCharacter('goat')">Mover Cabra</button>
+        <button onclick="moveCharacter('cabbage')">Mover Col</button>
+        <button onclick="crossRiver()">Cruzar Río</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
