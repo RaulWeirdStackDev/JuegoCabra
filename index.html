@@ -54,6 +54,7 @@
     </style>
 </head>
 <body>
+    <header class="fs-1 justify-content-center">¿Puedes hacer que todos crucen el río?</header>
     <div id="game-container">
         <div id="left-shore" class="shore">
             <div id="farmer" class="character">👨‍🌾</div>
@@ -72,6 +73,16 @@
         <button onclick="moveCharacter('goat')">Mover Cabra</button>
         <button onclick="moveCharacter('cabbage')">Mover Col</button>
         <button onclick="crossRiver()">Cruzar Río</button>
+    </div>
+    <div class="b-2 fs-4">
+        <p>Para ganar este juego, tienes que hacer que todos los personajes crucen de un lado al otro del río, pero cuidado!</p>
+        <ul>
+            <li>El lobo <strong>NO</strong> puede quedar solo con la cabra, ya que se la comería</li>
+            <li>La cabra <strong>NO</strong> puede quedar sola con la col, ya que se la comería</li>
+            <li>Sólo puedes transportar a dos personajes a la vez</li>
+            <li>Si no llevas al granjero contigo en todos los viajes, no puedes volver a transportarte</li>
+        </ul>
+
     </div>
     <footer class="bg-light d-flex flex-column align-items-center fs-5 border-top border-top-5 border-bottom border-bottom-5 mt-4">
         <p>© 2024 Creado por Raúl Rodríguez - Soluciones Informáticas.</p>
