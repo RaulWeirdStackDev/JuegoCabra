@@ -3,6 +3,8 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
+    font-family: 'Press+Start+2P', monospace; 
+    color: black; 
 }
 
 header {text-align: center;}
@@ -57,3 +59,10 @@ header {text-align: center;}
     max-width: 800px; 
 }
 
+button:hover {
+    background-color: #ddd;
+}
+
+button:active {
+    transform: scale(0.98);
+}
