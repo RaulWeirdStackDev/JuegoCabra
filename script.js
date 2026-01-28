@@ -32,6 +32,12 @@ function renderGame() {
     document.getElementById('left-shore').innerHTML = leftShore.map(item => `<div id="${item}" class="character">${getEmoji(item)}</div>`).join('');
     document.getElementById('right-shore').innerHTML = rightShore.map(item => `<div id="${item}" class="character">${getEmoji(item)}</div>`).join('');
     document.getElementById('boat').innerHTML = boat.map(item => `<div id="${item}" class="character">${getEmoji(item)}</div>`).join('');
+const crossBtn = document.getElementById('cross-button');
+if (boatPosition === 'left') {
+    crossBtn.innerHTML = "Cruzar ⬅";         
+} else {
+    crossBtn.innerHTML = "Cruzar ➡";       
+}
     checkGameOver();
 }
 
@@ -46,6 +52,8 @@ function getEmoji(character) {
         case 'cabbage':
             return '🥬';
     }
+
+
 }
 
 function resetGame() {
@@ -55,6 +63,7 @@ function resetGame() {
     boatPosition = 'left';
     renderGame();
 }
+
 
 function checkGameOver() {
     let message = "";
