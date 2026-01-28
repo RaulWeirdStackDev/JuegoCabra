@@ -1,17 +1,24 @@
-body {height: 100vh;}
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
 
 header {text-align: center;}
 
 #game-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Cambiado de space-between para mejor control */
     align-items: center;
-    margin: 20px;
+    gap: 10px;
+    flex-grow: 1; /* Esto hace que el juego ocupe el espacio central disponible */
+    margin: 10px;
 }
 
 .shore {
-    width: 200px;
-    height: 300px;
+    width: 150px; /* Un poco más angosto */
+    height: 200px; /* Reducido de 300px a 200px */
     border: 1px solid #000;
     display: flex;
     flex-direction: column;
@@ -50,11 +57,3 @@ header {text-align: center;}
     max-width: 800px; 
 }
 
-@media(min-width: 768px) {
-    body {max-height: 100dvh;}
-footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;}
-}

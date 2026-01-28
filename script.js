@@ -48,16 +48,34 @@ function getEmoji(character) {
     }
 }
 
+function resetGame() {
+    leftShore = ['farmer', 'wolf', 'goat', 'cabbage'];
+    rightShore = [];
+    boat = [];
+    boatPosition = 'left';
+    renderGame();
+}
+
 function checkGameOver() {
+    let message = "";
     if ((leftShore.includes('wolf') && leftShore.includes('goat') && !leftShore.includes('farmer')) ||
         (rightShore.includes('wolf') && rightShore.includes('goat') && !rightShore.includes('farmer'))) {
-        alert('El lobo se comió a la cabra! Juego Terminado.');
+        message = '¡El lobo se comió a la cabra! Juego Terminado.';
     } else if ((leftShore.includes('goat') && leftShore.includes('cabbage') && !leftShore.includes('farmer')) ||
         (rightShore.includes('goat') && rightShore.includes('cabbage') && !rightShore.includes('farmer'))) {
-        alert('La cabra se comió la col! Juego Terminado.');
-    } else if (rightShore.includes('farmer') && rightShore.includes('wolf') && rightShore.includes('goat') && rightShore.includes('cabbage')) {
-        alert('Felicidades! Has cruzado con éxito el río.');
+        message = '¡La cabra se comió la col! Juego Terminado.';
+    } else if (rightShore.length === 4) { // Condición de victoria simplificada
+        message = '¡Felicidades! Has cruzado con éxito el río.';
+    }
+
+    if (message) {
+        // Usamos un pequeño delay para que el render se complete antes del alert
+        setTimeout(() => {
+            alert(message);
+            resetGame();
+        }, 100);
     }
 }
+
 
 renderGame();
